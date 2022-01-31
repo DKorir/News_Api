@@ -1,2 +1,13 @@
-API_KEY=''
-SECRET_KEY='I_love_flask'
+
+
+
+
+
+
+def Config():
+    """
+    """
+    API_KEY=""
+    SOURCE_URL=""
+    ARTICLES_URL=""
+    BASE_URL=""
