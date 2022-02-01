@@ -1,6 +1,5 @@
 from email.mime import image
-
-from .articles import ArticlesClass
+import urllib.request,json
 
 from .sources import SourcesClass
 
