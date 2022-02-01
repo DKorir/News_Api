@@ -53,7 +53,6 @@ def process_results(movie_list):
 
 
 def get_articles(name):
-    get_articles_url='https://newsapi.org/v2/top-headlines?sources={}&apiKey=d2fd3e86d60440258ca5001e30e4854c'.format(name)
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data=url.read()
         get_articles_response = json.loads(get_articles_data)
