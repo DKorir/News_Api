@@ -1,18 +1,2 @@
-
-
-
-
-
-
-def Config():
-    """
-    """
-    API_KEY=''
-    SOURCE_URL=''
-    ARTICLES_URL=''
-    BASE_URL=''
-
-def ProdConfig(Config):
-    """
-    """
-    pass
+NEWS_API_KEY='d2fd3e86d60440258ca5001e30e4854c'
+SECRET_KEY='I_love_flask'

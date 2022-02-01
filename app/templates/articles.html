@@ -1,0 +1,72 @@
+{% extends 'base.html'%} {% block content %}
+<br>
+<br>
+<br>
+<body>
+  <h1 class="text-capitalize"> {{id}} </h3>
+  <div class="container">
+    <div class="card-columns">
+      {% for res in results %}
+
+      <div class="card">
+        <img class="card" src="{{res.urlimage}}" alt="Card image cap" size="100px180">
+        <div class="card-body">
+          <h5 class="card-title">{{res.author}}</h5>
+          <p res="card-text">{{res.description}}</p>
+          <a href="{{res.urlToImage}}">
+            <p class="card-text">Click here for more details!</p>
+          </a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Article date:{{res.time}}</small>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endblock %}
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    {% for res in results %}
+    <img src="{{ res.urlToImage }}"  alt="">
+    
+    <h3>{{ res.title }}</h3>
+    <h5>{{ res.description[:100] }}...</h5>
+    <p>{{ res.publishedAt }}</p>
+    
+    {%endfor%}
+</body>
+</html>
+
+
+
