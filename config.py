@@ -8,7 +8,7 @@ class Config():
     """
     NEWS_API_KEY=os.environ.get('NEWS_API_KEY')
     SECRET_KEY=os.environ.get('SECRET_KEY')
-    NEWS_BASE_URL='https://newsapi.org/v2/sources?apiKey={}'
+    NEWS_BASE_URL='https://newsapi.org/v2/sources?api_Key={}'
 
 class ProdConfig(Config):
     """

@@ -10,6 +10,8 @@ api_key = None
 
 # Getting the news base url
 base_url = None    
+#getting sources url
+cat_url=None
 
 def configure_request(app):
     global api_key_base_url
