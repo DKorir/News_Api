@@ -1,25 +1,22 @@
 <!-- <h1>my display{{message}}</h1> -->
 {% extends 'base.html'%} {% block content %} {% block styles%} {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
+<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}"> {% endblock %}
 <br>
-<br>
-<br>
-
 <body>
 
-    <div class="main">
+    <div class="main" style="height: 800px; overflow-y: scroll;">
       <div class="container-fluid">
         <div class="row">
   
-          <div class="col-md-3">
-            <div class="card-column">
+          <div class="col-md-3" style="height: 800px; background-color: lightslategray; ">
+            <div class="card-column" >
               <div class="card-header">
-                <h4>NEWS SOURCES</h4>
+                <h1 style="text-decoration: underline; text-align: center;font-weight: bold;">NEWS SOURCES</h1>
               </div>
               <div class="list-group list-group-flush scrolly">
                 <ul>
                   {% for pop in popular %}
-                  <button> <a href="{{pop.url}}">{{pop.name}}</a> </button>
+                  <button style="text-transform: capitalize; font-weight: bold; width: 100px; height: 50px;"> <a href="{{pop.url}}">{{pop.name}}</a> </button>
 
 
                   {% endfor %}
@@ -30,13 +27,13 @@
           </div>
   
           <div class="col-md-9">
-            <h1> ARTICLE NEWS </h3>
+            <h1 style="text-align: center; font-weight: bold;"> ARTICLE NEWS </h1>
             <div class="container">
               <div class="card-columns">
                 {% for res in results %}
   
-                <div class="card">
-                  <img class="card" src="{{res.urlToImage}}" alt="Card image cap" size="100px180">
+                <div class="card" style="border-style: solid; border-radius: 4px; border-color: black;border-width: 3px; background-color: wheat; width: 45%; padding: 4px;margin: 4px; float: left; " >
+                  <img class="card" src="{{res.urlToImage}}" width="100%" alt="Card image cap" size="100px180">
                   <div class="card-body">
                     <h5 class="card-title">{{res.author}}</h5>
                     <p class="card-text">{{res.description}}</p>
@@ -59,5 +56,7 @@
   
   </body>
   {% endblock %}
-
+<hr>
+  <br>
+  <br>
 
