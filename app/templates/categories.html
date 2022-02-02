@@ -6,21 +6,23 @@
   <br>
   <br>
   <h1>{{cat}} NEWS </h3>
-    <div class="container">
-      <div class="card-columns">
+    <div style="background-color: rgb(211, 204, 204);"  class="container">
+      <div class="card-columns"  style="display: flex;border: solid 1px black;height: 800px;overflow:scroll; max-width: 700px;">
         {% for category in category %}
 
-        <div class="card">
-          <img class="card" src="{{category.image}}" alt="Card image cap" size="100px180">
+
+
+        <div style="background-color: violet; width: 30%; padding: 20px;margin: 3px;" class="card">
+          <img class="card" src="{{category.urlToImage}}" height="200px" width="100%" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{category.author}}</h5>
             <p class="card-text">{{category.description}}</p>
             <a href="{{category.url}}">
-              <p class="card-text">Click here for more details!</p>
+              <p class="card-text">More</p>
             </a>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Publish date:{{category.time}}</small>
+            <small class="text-muted">Publish date:{{category.publishedAt}}</small>
           </div>
         </div>
         {% endfor %}

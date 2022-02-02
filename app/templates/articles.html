@@ -9,11 +9,11 @@
       {% for res in results %}
 
       <div class="card">
-        <img class="card" src="{{res.urlimage}}" alt="Card image cap" size="100px180">
+        <img class="card" src="{{res.urlToImage}}" alt="Card image cap" size="100px180">
         <div class="card-body">
           <h5 class="card-title">{{res.author}}</h5>
           <p res="card-text">{{res.description}}</p>
-          <a href="{{res.urlToImage}}">
+          <a href="{{res.url}}">
             <p class="card-text">Click here for more details!</p>
           </a>
         </div>

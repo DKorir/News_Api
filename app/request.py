@@ -90,7 +90,7 @@ def get_category(cat_name):
     '''
     function that gets the response to the category json
     '''
-    get_category_url = cat_url.format(cat_name,api_key)
+    get_category_url ='https://newsapi.org/v2/top-headlines?category={}&apiKey=d2fd3e86d60440258ca5001e30e4854c'.format(cat_name).format(cat_name,api_key)
     print(get_category_url)
     with urllib.request.urlopen(get_category_url) as url:
         get_category_data = url.read()
@@ -100,7 +100,7 @@ def get_category(cat_name):
 
         if get_cartegory_response['articles']:
             get_cartegory_list = get_cartegory_response['articles']
-            get_cartegory_results = process_articles_results(get_cartegory_list)
+            get_cartegory_results = results(get_cartegory_list)
 
     return get_cartegory_results
 
